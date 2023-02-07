@@ -38,7 +38,7 @@ cmdUtils.register_command("cert", "<path>", "Path to your client certificate in 
 cmdUtils.register_command("port", "<int>", "Connection port. AWS IoT supports 443 and 8883 (optional, default=auto).",
                           type=int)
 cmdUtils.register_command("client_id", "<str>", "Client ID to use for MQTT connection (optional, default='test-*').",
-                          default="lightbulb-1")
+                          default="test-" + str(uuid4()))
 cmdUtils.register_command("thing_name", "<str>", "The name assigned to your IoT Thing", required=True)
 cmdUtils.register_command("shadow_property", "<str>",
                           "The name of the shadow property you want to change (optional, default='color'",
